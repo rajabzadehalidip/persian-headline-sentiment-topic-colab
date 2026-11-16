@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><title>راهنمای ساده تمرین تیترهای فارسی</title>
+<style>
+@page{size:A4;margin:15mm 16mm}
+*{box-sizing:border-box}html,body{margin:0;background:#fff;color:#202536;font-family:Tahoma,"Segoe UI",Arial,sans-serif}
+body{font-size:16px;line-height:1.9}.page{break-after:page;position:relative;height:1009px;padding-bottom:42px}.page:last-child{break-after:auto}
+.eyebrow{font-size:13px;color:#6b587d;margin:0 0 6px}h1{font-size:29px;line-height:1.6;margin:0;color:#31224c}h2{font-size:24px;line-height:1.6;margin:0;color:#31224c}.lead{font-size:16px;line-height:1.9;margin:10px 0 18px;color:#525567}.rule{height:3px;background:#dd7d47;margin:14px 0 18px}
+.page:last-child .step{margin-bottom:10px;padding-bottom:8px}
+.step{margin:0 0 16px;padding:0 0 12px;border-bottom:1px solid #e3e2e9}.step h3{font-size:20px;line-height:1.7;margin:0 0 5px;color:#31224c}.step p{margin:3px 0}.num{display:inline-block;color:#a64b22;font-weight:bold;margin-left:7px}a{color:#744627;text-decoration:underline}code,bdi{direction:ltr;unicode-bidi:isolate}code{font-family:Consolas,"Courier New",monospace;font-size:14px;background:#f2f1f6;padding:1px 4px;border-radius:3px}a.file{display:block;direction:ltr;text-align:right;unicode-bidi:isolate;font:14px/1.8 Consolas,"Courier New",monospace;padding:2px 0}.menu{display:inline-block;direction:ltr;unicode-bidi:isolate;font-family:"Segoe UI",Arial,sans-serif;font-size:15px;background:#f3f1f7;padding:2px 7px}.note{background:#f7f4ed;border-right:3px solid #dd7d47;padding:10px 13px;font-size:14px;line-height:1.9;margin-top:12px}.links{display:flex;gap:25px;margin:7px 0 13px;font-size:16px}.small{font-size:13px;color:#606577}.footer{position:absolute;bottom:0;left:0;right:0;border-top:1px solid #dedde5;padding-top:6px;display:flex;justify-content:space-between;color:#686a78;font-size:12px}
+</style></head><body>
+<section class="page">
+ <p class="eyebrow">تمرین کارگاه هوش مصنوعی برای روابط عمومی</p>
+ <h1>راهنمای سادهٔ تحلیل تیترهای فارسی</h1>
+ <p class="lead">۲٬۰۰۰ تیتر را از نظر احساس و موضوع دسته‌بندی می‌کنیم و نتیجهٔ مدل را با برچسب‌های انسانی مقایسه می‌کنیم. برای شروع، لپ‌تاپ، اینترنت و حساب گوگل کافی است. برای اجرای مدل، کلید Gemini هم لازم دارید.</p>
+ <div class="links"><a href="https://colab.research.google.com/github/rajabzadehalidip/persian-headline-sentiment-topic-colab/blob/main/Persian_Headline_Sentiment_and_Topic_Classification.ipynb">باز کردن نوت‌بوک در Colab</a><a href="https://github.com/rajabzadehalidip/persian-headline-sentiment-topic-colab">فایل‌های پروژه در GitHub</a></div>
+ <div class="rule"></div>
+ <div class="step"><h3><span class="num">۱.</span>دو فایل Excel را دانلود کنید</h3>
+  <p>روی این دو نام کلیک کنید و فایل‌ها را روی رایانه نگه دارید:</p>
+  <a class="file" href="https://raw.githubusercontent.com/rajabzadehalidip/persian-headline-sentiment-topic-colab/main/headlines_2000_sample.xlsx">headlines_2000_sample.xlsx</a>
+  <a class="file" href="https://raw.githubusercontent.com/rajabzadehalidip/persian-headline-sentiment-topic-colab/main/gold_annotation_template_100.xlsx">gold_annotation_template_100.xlsx</a>
+  <p>فایل اول، دادهٔ اصلی است. فایل دوم، نمونهٔ ۱۰۰‌تایی برای برچسب‌گذاری انسانی است.</p>
+ </div>
+ <div class="step"><h3><span class="num">۲.</span>نمونهٔ انسانی را دو نفره آماده کنید</h3>
+  <p>در فایل دوم، برگهٔ <bdi>Codebook</bdi> را بخوانید. در برگهٔ <bdi>Annotate</bdi>، هر نفر مستقل از دیگری ستون‌های احساس و موضوع خودش را پر کند: <code>rater_1_…</code> و <code>rater_2_…</code>.</p>
+  <p>بعد اختلاف‌ها را بررسی کنید و برچسب نهایی را در ستون‌های <code>consensus_…</code> بنویسید. فایل را ذخیره کنید. نام برگه‌ها، ستون‌ها و شناسه‌ها را تغییر ندهید.</p>
+ </div>
+ <div class="step"><h3><span class="num">۳.</span>نسخهٔ خودتان را در Colab بسازید</h3>
+  <p><a href="https://colab.research.google.com/github/rajabzadehalidip/persian-headline-sentiment-topic-colab/blob/main/Persian_Headline_Sentiment_and_Topic_Classification.ipynb">نوت‌بوک را باز کنید</a> و وارد حساب گوگل شوید. از منوی <span class="menu">File &gt; Save a copy in Drive</span> یک کپی برای خودتان بسازید. ادامهٔ کار را در همان کپی انجام دهید.</p>
+ </div>
+ <div class="step"><h3><span class="num">۴.</span>سلول‌ها را به‌ترتیب اجرا و فایل‌ها را بارگذاری کنید</h3>
+  <p>دکمهٔ مثلث کنار هر سلول کد را بزنید و صبر کنید تمام شود. از اولین سلول نصب کتابخانه‌ها شروع کنید. اگر اتصال خواست، <bdi>Connect</bdi> را بزنید.</p>
+  <p>در بخش <bdi>1. Upload the two Excel workbooks</bdi>، اول فایل ۲٬۰۰۰‌تایی و بعد فایل ۱۰۰‌تاییِ تکمیل‌شده را انتخاب کنید.</p>
+ </div>
+ <div class="footer"><span>راهنمای دانشجو | بدون نیاز به نصب پایتون روی رایانه</span><span>۱ از ۲</span></div>
+</section>
+<section class="page">
+ <p class="eyebrow">ادامهٔ راهنما</p><h2>اول آزمایش کوچک، بعد اجرای کامل</h2>
+ <p class="lead">سلول‌ها را به‌ترتیب اجرا کنید. اجرای کامل، بعد از بررسی آزمایش نمونه است.</p>
+ <div class="rule"></div>
+ <div class="step"><h3><span class="num">۵.</span>پرامپت و کلید Gemini را آماده کنید</h3>
+  <p>متن <code>PROMPT_FA</code> و تعریف برچسب‌ها را بخوانید.</p>
+  <p>از مدرس یا <a href="https://aistudio.google.com/apikey">Google AI Studio</a> کلید Gemini بگیرید. در نوار چپ Colab، بخش <bdi>Secrets</bdi>، رازی با نام دقیق <code>GEMINI_API_KEY</code> بسازید. کلید را در مقدار آن بگذارید و <bdi>Notebook access</bdi> را روشن کنید. سلول اتصال را اجرا کنید.</p>
+  <p><b>کلید را داخل سلول کد یا فایل قابل اشتراک ننویسید.</b></p>
+ </div>
+ <div class="step"><h3><span class="num">۶.</span>آزمایش نمونهٔ انسانی را اجرا و بررسی کنید</h3>
+  <p>بخش <bdi>5. Pilot on the gold sample</bdi> و جدول توافق در بخش <bdi>6</bdi> را اجرا کنید. موارد اختلاف را بخوانید.</p>
+  <p><code>exact_agreement</code> درصد توافق است؛ <code>cohen_kappa</code> درصد نیست. پس از تغییر پرامپت یا مدل، سلول تنظیمات و آزمایش نمونه را دوباره اجرا کنید.</p>
+ </div>
+ <div class="step"><h3><span class="num">۷.</span>فقط پس از بررسی، همهٔ تیترها را اجرا کنید</h3>
+  <p>در بخش <bdi>7</bdi>، فقط پس از بررسی آزمایش، خط زیر را تغییر دهید و سلول را اجرا کنید:</p>
+  <p style="direction:ltr;text-align:left"><code>RUN_FULL_DATASET = True</code></p>
+  <p>تا پایان اجرا صبر کنید. اجرای کامل، محدودیت سهمیه یا هزینه دارد.</p>
+ </div>
+ <div class="step"><h3><span class="num">۸.</span>نمودارها را ببینید و خروجی را دانلود کنید</h3>
+  <p>بخش‌های <bdi>8</bdi> و <bdi>9</bdi> را اجرا کنید. فایل زیر دانلود می‌شود:</p>
+  <p style="direction:ltr;text-align:left"><code>persian_headlines_annotated_2000.xlsx</code></p>
+  <p>کپی نوت‌بوک، خروجی، نام مدل و پرامپت را نگه دارید.</p>
+ </div>
+ <div class="note"><b>خطا؟</b> اول کلید، دسترسی <bdi>Secrets</bdi> و فایل‌های بارگذاری‌شده را بررسی کنید. خطای سهمیه یا مدل را با مدرس مطرح کنید.<br><b>برای کار واقعی:</b> پس از انتخاب پرامپت، روی یک نمونهٔ انسانی مستقل هم آزمایش کنید. این نوت‌بوک آن نمونه را خودکار جدا نمی‌کند.</div>
+ <div class="footer"><span>فایل‌ها و نوت‌بوک: مخزن پروژه در GitHub</span><span>۲ از ۲</span></div>
+</section>
+</body></html>

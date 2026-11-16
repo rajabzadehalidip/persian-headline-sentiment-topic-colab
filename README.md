@@ -2,6 +2,15 @@
 
 This project is a beginner-friendly Google Colab workflow for class annotation and LLM-assisted text analysis of Persian news headlines.
 
+## Quick start / شروع سریع
+
+- [Open the notebook in Google Colab](https://colab.research.google.com/github/rajabzadehalidip/persian-headline-sentiment-topic-colab/blob/main/Persian_Headline_Sentiment_and_Topic_Classification.ipynb)
+- [راهنمای سادهٔ فارسی، گام‌به‌گام (PDF)](docs/student-guide-fa.pdf)
+- [Download the 2,000-headline workbook](https://raw.githubusercontent.com/rajabzadehalidip/persian-headline-sentiment-topic-colab/main/headlines_2000_sample.xlsx)
+- [Download the 100-headline human-annotation template](https://raw.githubusercontent.com/rajabzadehalidip/persian-headline-sentiment-topic-colab/main/gold_annotation_template_100.xlsx)
+
+Start with the two-person human annotation, then run the pilot before enabling the full dataset. The notebook uses Gemini API access and may incur quota or billing limits. Its pilot does not automatically reserve an independent final test set; use a fresh human-labeled test sample before making deployment claims.
+
 ## Files
 
 - `Persian_Headline_Sentiment_and_Topic_Classification.ipynb` — guided Colab notebook.
