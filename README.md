@@ -4,7 +4,7 @@ Two beginner-friendly classroom experiments, with Persian instructions. Open a n
 
 | Experiment | Open notebook | Guide | API |
 |---|---|---|---|
-| YouTube comments: optimism/pessimism about AI, expressed emotion, stance toward the video | [Open in Colab](https://colab.research.google.com/github/rajabzadehalidip/persian-headline-sentiment-topic-colab/blob/main/YouTube_AI_Comments_Analysis.ipynb) | [Full step-by-step guide with real Colab screenshots (Persian)](docs/youtube-comments-guide-fa.md) | GapGPT **or** OpenRouter |
+| YouTube comments: optimism/pessimism about AI, expressed emotion, stance toward the video | [Open in Colab](https://colab.research.google.com/github/rajabzadehalidip/persian-headline-sentiment-topic-colab/blob/main/YouTube_AI_Comments_Analysis.ipynb) | [Persian PDF guide with real Colab screenshots](output/pdf/youtube-comments-guide-fa.pdf) · [Markdown source](docs/youtube-comments-guide-fa.md) | GapGPT **or** OpenRouter |
 | 2,000 Persian headlines: sentiment and topic | [Open in Colab](https://colab.research.google.com/github/rajabzadehalidip/persian-headline-sentiment-topic-colab/blob/main/Persian_Headline_Sentiment_and_Topic_Classification.ipynb) | [راهنمای فارسی PDF](docs/student-guide-fa.pdf) | GapGPT · GPT-6 Luna |
 
 ## YouTube comment experiment
