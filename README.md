@@ -1,4 +1,23 @@
-# Persian headline classification | Colab project
+# Text analysis classroom labs | Google Colab
+
+Two beginner-friendly classroom experiments, with Persian instructions. Open a notebook, run the numbered sections, upload your file and edit the prompt. No programming experience is required.
+
+| Experiment | Open notebook | Guide | API |
+|---|---|---|---|
+| YouTube comments: optimism/pessimism about AI, expressed emotion, stance toward the video | [Open in Colab](https://colab.research.google.com/github/rajabzadehalidip/persian-headline-sentiment-topic-colab/blob/main/YouTube_AI_Comments_Analysis.ipynb) | [راهنمای سادهٔ فارسی](docs/youtube-comments-guide-fa.md) | GapGPT **or** OpenRouter |
+| 2,000 Persian headlines: sentiment and topic | [Open in Colab](https://colab.research.google.com/github/rajabzadehalidip/persian-headline-sentiment-topic-colab/blob/main/Persian_Headline_Sentiment_and_Topic_Classification.ipynb) | [راهنمای فارسی PDF](docs/student-guide-fa.pdf) | Gemini |
+
+## YouTube comment experiment
+
+`YouTube_AI_Comments_Analysis.ipynb` is self-contained. Students upload CSV/TSV, Excel (`.xlsx`), JSON/JSONL or line-based TXT; confirm the comment-text column; select GapGPT or OpenRouter; and enter the key through a hidden password prompt or Colab Secrets. The key is never embedded in the notebook or exported results.
+
+Students edit the prompt and supply a short summary of the video's actual claims. The notebook does not watch the video. The three targets are independent: liking AI is different from agreeing with the video; emotion refers to what the comment expresses. `mixed`, `neutral`, `not_addressed` and `unclear` options prevent forced judgments. Missing video/reply context remains visible.
+
+Start with the same seeded 10-comment pilot, inspect it against independent human labels, then change the prompt and compare the same comments. A blank human-annotation sample can be downloaded before seeing model labels. The optional larger run defaults off and requires a technically successful pilot of the current configuration plus an explicit human-review/cost checkbox. The initial larger-run limit is 100 comments; all rows can be selected separately.
+
+Charts show label distributions, **not accuracy**. Exports include Excel, CSV and a lossless JSON log with prompts, evidence, raw responses, requested/returned model IDs, sampling seed and errors. Previous outputs are reused within a live session only when the entire configuration and comment match. Interrupted runs keep completed rows. No scraped YouTube comments, identities, API keys or real model results are included in this public repository.
+
+## Persian headline classification
 
 This project is a beginner-friendly Google Colab workflow for class annotation and LLM-assisted text analysis of Persian news headlines.
 
