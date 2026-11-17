@@ -4,12 +4,12 @@ Two beginner-friendly classroom experiments, with Persian instructions. Open a n
 
 | Experiment | Open notebook | Guide | API |
 |---|---|---|---|
-| YouTube comments: optimism/pessimism about AI, expressed emotion, stance toward the video | [Open in Colab](https://colab.research.google.com/github/rajabzadehalidip/persian-headline-sentiment-topic-colab/blob/main/YouTube_AI_Comments_Analysis.ipynb) | [راهنمای سادهٔ فارسی](docs/youtube-comments-guide-fa.md) | GapGPT **or** OpenRouter |
+| YouTube comments: optimism/pessimism about AI, expressed emotion, stance toward the video | [Open in Colab](https://colab.research.google.com/github/rajabzadehalidip/persian-headline-sentiment-topic-colab/blob/main/YouTube_AI_Comments_Analysis.ipynb) | [Full step-by-step guide with real Colab screenshots (Persian)](docs/youtube-comments-guide-fa.md) | GapGPT **or** OpenRouter |
 | 2,000 Persian headlines: sentiment and topic | [Open in Colab](https://colab.research.google.com/github/rajabzadehalidip/persian-headline-sentiment-topic-colab/blob/main/Persian_Headline_Sentiment_and_Topic_Classification.ipynb) | [راهنمای فارسی PDF](docs/student-guide-fa.pdf) | GapGPT · GPT-6 Luna |
 
 ## YouTube comment experiment
 
-`YouTube_AI_Comments_Analysis.ipynb` is self-contained. Students upload CSV/TSV, Excel (`.xlsx`), JSON/JSONL or line-based TXT; confirm the comment-text column; select GapGPT or OpenRouter; and enter the key through a hidden password prompt or Colab Secrets. The key is never embedded in the notebook or exported results.
+`YouTube_AI_Comments_Analysis.ipynb` contains the experiment code and instructions, but **does not contain the YouTube comments data**. The QR code/link only opens the notebook; students need a permitted comments file from the instructor and upload it themselves. See the [complete step-by-step guide with real Colab screenshots](docs/youtube-comments-guide-fa.md). Students can upload CSV/TSV, Excel (`.xlsx`), JSON/JSONL or line-based TXT; confirm the comment-text column; select GapGPT or OpenRouter; and enter the key through a hidden password prompt or Colab Secrets. The key is never embedded in the notebook or exported results.
 
 Students edit the prompt and supply a short summary of the video's actual claims. The notebook does not watch the video. The three targets are independent: liking AI is different from agreeing with the video; emotion refers to what the comment expresses. `mixed`, `neutral`, `not_addressed` and `unclear` options prevent forced judgments. Missing video/reply context remains visible.
 
@@ -27,6 +27,8 @@ This project is a beginner-friendly Google Colab workflow for class annotation a
 - [راهنمای سادهٔ فارسی، گام‌به‌گام (PDF)](docs/student-guide-fa.pdf)
 - [Download the 2,000-headline workbook](https://raw.githubusercontent.com/rajabzadehalidip/persian-headline-sentiment-topic-colab/main/headlines_2000_sample.xlsx)
 - [Download the 100-headline human-annotation template](https://raw.githubusercontent.com/rajabzadehalidip/persian-headline-sentiment-topic-colab/main/gold_annotation_template_100.xlsx)
+
+The headline workbook and annotation template are included in this repository, but Colab does not automatically load them. Download both files and upload them when the notebook asks. The gold template is blank for students to annotate; it is not pre-labeled ground truth.
 
 Start with the two-person human annotation, then run the pilot before enabling the full dataset. Each student should use their own GapGPT API key; API use may have quota or billing limits. Its pilot does not automatically reserve an independent final test set; use a fresh human-labeled test sample before making deployment claims.
 
